@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactCard from "../components/ContactCard";
 import "./DocSchedule.css";
+import Axios from "axios";
 
 export default function DocSchedule() {
-  const doctors = [
+  const initialDoctors = [
     {
       id: 1,
       doctor: "Dr. Coventry",
@@ -23,16 +24,22 @@ export default function DocSchedule() {
       onDuty: false,
     },
   ];
+  const [doctors, setDoctors] = useState([]);
+  const apiUrl =
+    "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      //fetch data
+      const fetchedList = await Axios.get(apiUrl);
+      console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
+      setDoctors(fetchedList.data);
+    };
 
-  // useEffect(() => {
-
-  //   //fetch data
-  //   // call fetch()
-  // }, []);
+    fetchDoctors(); // call fetch()
+  }, []);
 
   const renderTableRow = () => {
-    const newDoctors = [...doctors];
-    return newDoctors.map((doc) => {
+    return doctors.map((doc) => {
       const { doctor, onDuty } = doc;
       return (
         <tr>
@@ -49,7 +56,6 @@ export default function DocSchedule() {
       <div>
         <h2>Placeholder for a schedule TABLE</h2>
 
-        <p>Table with thead, tfoot, and tbody</p>
         <table className="Table">
           <thead>
             <tr>
