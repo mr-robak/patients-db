@@ -189,12 +189,12 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 
 | Criteria                                                                         | Points |
 | -------------------------------------------------------------------------------- | ------ |
-| A form is displayed on the Patient Signup page                                   | 1      |
-| The form has inputs for firstName, lastName, email, phoneNumber & submit         | 0.5    |
-| The form has a select input for gender, and a date input for dateOfBirth         | 0.5    |
-| The state of the form is controlled using React useState hook(s)                 | 2      |
-| When the form is submitted, the user input for all form fields is console.logged | 2      |
-| When the form has been submitted, we show a success message to the user          | 2      |
+| A form is displayed on the Patient Signup page                                   | 1      | v |
+| The form has inputs for firstName, lastName, email, phoneNumber & submit         | 0.5    | v |
+| The form has a select input for gender, and a date input for dateOfBirth         | 0.5    | v |
+| The state of the form is controlled using React useState hook(s)                 | 2      | v |
+| When the form is submitted, the user input for all form fields is console.logged | 2      | v |
+| When the form has been submitted, we show a success message to the user          | 2      | v |
 | The success message is an alert, prompt or confirm popup                         | -1     |
 | Submitting the form refreshes the page                                           | -2     |
 | Total                                                                            | 8      |

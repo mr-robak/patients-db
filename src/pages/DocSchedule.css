@@ -1,3 +1,8 @@
+h2 {
+  font-weight: bold;
+  color: blue;
+}
+
 table {
   margin: 1em;
 }

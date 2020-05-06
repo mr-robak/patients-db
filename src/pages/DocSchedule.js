@@ -34,7 +34,7 @@ export default function DocSchedule() {
     const fetchDoctors = async () => {
       //fetch data
       const fetchedList = await Axios.get(apiUrl);
-      console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
+      // console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
       setDoctors(fetchedList.data);
       setFetchStatus("");
     };
@@ -69,10 +69,7 @@ export default function DocSchedule() {
   return (
     <div>
       <h1>Who is on duty?</h1>
-      <div>
-        <h2>Placeholder for a schedule TABLE</h2>
-        {fetchStatus ? <h2>{fetchStatus} </h2> : renderTable()}
-      </div>
+      <div>{fetchStatus ? <h2>{fetchStatus} </h2> : renderTable()}</div>
       <ContactCard />
     </div>
   );
