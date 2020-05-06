@@ -173,12 +173,12 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 
 | Criteria                                                          | Points |
 | ----------------------------------------------------------------- | ------ |
-| Doctor availabilty is displayed on the who is on duty page        | 1      |
-| The data is fetched from the api, not hardcoded                   | 2      |
-| If the data is still being fetched, display "loading" to the user | 2      |
-| The data is displayed using .map                                  | 1      |
+| Doctor availabilty is displayed on the who is on duty page        | 1      | v |
+| The data is fetched from the api, not hardcoded                   | 2      | v |
+| If the data is still being fetched, display "loading" to the user | 2      | v |
+| The data is displayed using .map                                  | 1      | v |
 | There is a warning in the console regarding "key" props           | -1     |
-| Doctor availability is displayed using an html `table` element    | 1      |
+| Doctor availability is displayed using an html `table` element    | 1      | v |
 | Total                                                             | 7      |
 
 ### 4. As a new patient I want to be able to sign up
