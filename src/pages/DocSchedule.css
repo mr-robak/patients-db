@@ -1,0 +1,12 @@
+table {
+  margin: 1em;
+}
+
+td {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
