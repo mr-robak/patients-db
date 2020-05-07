@@ -23,6 +23,7 @@ export default function PatientsDB() {
       onDuty: false,
     },
   ];
+
   const [doctors, setDoctors] = useState([]);
   // const [fetchStatus, setFetchStatus] = useState("");
   const [selectedDoc, setSelectedDoc] = useState("please select a doctor");
@@ -56,30 +57,27 @@ export default function PatientsDB() {
     setSelectedDoc(event.target.value);
   };
 
-  const renderOptions = () => {
-    return doctors.map((doc) => {
-      const { id, doctor } = doc;
-      return (
-        <option key={id} value={doctor}>
-          {doctor}
-        </option>
-      );
-    });
-  };
+  const renderOptions = doctors.map((doc) => {
+    const { id, doctor } = doc;
+    return (
+      <option key={id} value={doctor}>
+        {doctor}
+      </option>
+    );
+  });
 
-  const renderPatients = () => {
-    patients.map((patient) => {
-      const { id, firstName, lastName, dateOfBirth } = patient;
-      return (
-        <PatientCard
-          key={id}
-          firstName={firstName}
-          lastName={lastName}
-          dateOfBirth={dateOfBirth}
-        />
-      );
-    });
-  };
+  const renderPatients = patients.map((patient) => {
+    const { id, firstName, lastName, dateOfBirth } = patient;
+    return (
+      <PatientCard
+        key={id}
+        id={id}
+        firstName={firstName}
+        lastName={lastName}
+        dateOfBirth={dateOfBirth}
+      />
+    );
+  });
 
   return (
     <div>
@@ -90,10 +88,18 @@ export default function PatientsDB() {
           <option key="-1" value="showing all patients">
             showing all patients
           </option>
-          {renderOptions()}
+          {renderOptions}
         </select>
       </label>
-      {renderPatients()}
+      {renderPatients}
+
+      {/* <PatientCard
+      // key={id}
+      // // id={id}
+      // firstName={firstName}
+      // lastName={lastName}
+      // dateOfBirth={dateOfBirth}
+      /> */}
     </div>
   );
 }

@@ -195,8 +195,8 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The state of the form is controlled using React useState hook(s)                 | 2      | v |
 | When the form is submitted, the user input for all form fields is console.logged | 2      | v |
 | When the form has been submitted, we show a success message to the user          | 2      | v |
-| The success message is an alert, prompt or confirm popup                         | -1     |
-| Submitting the form refreshes the page                                           | -2     |
+| The success message is an alert, prompt or confirm popup                         | -1     | v |
+| Submitting the form refreshes the page                                           | -2     | v |
 | Total                                                                            | 8      |
 
 ### 5. As a doctor I want to be able to view which patients I have, so I can see who I am responsible for
@@ -225,9 +225,9 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 
 | Criteria                                                                  | Points |
 | ------------------------------------------------------------------------- | ------ |
-| The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      |
-| The data for each patient is displayed using a seperate component         | 2      |
-| The data is displayed using .map                                          | 1      |
+| The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      | v |
+| The data for each patient is displayed using a seperate component         | 2      | v |
+| The data is displayed using .map                                          | 1      | v |
 | There is a warning in the console regarding "key" props                   | -1     |
 | The patients are sorted by their `lastName` using .sort                   | 2      |
 | The data for the patients is fetched from the api, not hardcoded          | 1      |

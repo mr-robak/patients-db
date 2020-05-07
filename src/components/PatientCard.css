@@ -1,0 +1,7 @@
+.PatientCard {
+  width: 300px;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(85, 85, 85);
+  margin-top: 1em;
+}
