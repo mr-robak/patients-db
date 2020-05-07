@@ -24,7 +24,7 @@ export default function SignUp() {
     console.log(newPatient);
   };
 
-  const textInput = (event) => {
+  const formInputHandler = (event) => {
     // console.log(event.target.name); // the name of the form element
     // console.log(event.target.value); // the value of the form element
     const newKeyValue = { [event.target.name]: event.target.value };
@@ -60,7 +60,7 @@ export default function SignUp() {
             type="text"
             name="firstName"
             value={formData.firstName}
-            onChange={textInput}
+            onChange={formInputHandler}
             required
           />
         </label>
@@ -70,7 +70,7 @@ export default function SignUp() {
             type="text"
             name="lastName"
             value={formData.lastName}
-            onChange={textInput}
+            onChange={formInputHandler}
             required
           />
         </label>
@@ -80,7 +80,7 @@ export default function SignUp() {
             type="text"
             name="email"
             value={formData.email}
-            onChange={textInput}
+            onChange={formInputHandler}
             required
           />
         </label>
@@ -90,7 +90,7 @@ export default function SignUp() {
             type="text"
             name="phone"
             value={formData.phone}
-            onChange={textInput}
+            onChange={formInputHandler}
             required
           />
         </label>
@@ -99,7 +99,7 @@ export default function SignUp() {
           <select
             name="gender"
             value={formData.gender}
-            onChange={textInput}
+            onChange={formInputHandler}
             required
           >
             <option value="">--please choose an option--</option>
@@ -117,7 +117,7 @@ export default function SignUp() {
             min="01-01-1900"
             max="31-12-2020"
             required
-            onChange={textInput}
+            onChange={formInputHandler}
           />
         </label>
         <input type="submit" value="Submit" />

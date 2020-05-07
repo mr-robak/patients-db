@@ -29,6 +29,7 @@ export default function DocSchedule() {
 
   const apiUrl =
     "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
+
   useEffect(() => {
     setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
@@ -53,9 +54,9 @@ export default function DocSchedule() {
         </thead>
         <tbody>
           {doctors.map((doc) => {
-            const { doctor, onDuty } = doc;
+            const { id, doctor, onDuty } = doc;
             return (
-              <tr>
+              <tr key={id}>
                 <td>{doctor}</td>
                 <td>{onDuty ? "on duty" : "off duty"}</td>
               </tr>
@@ -70,7 +71,7 @@ export default function DocSchedule() {
     <div>
       <h1>Who is on duty?</h1>
       <div>{fetchStatus ? <h2>{fetchStatus} </h2> : renderTable()}</div>
-      <ContactCard />
+      <ContactCard key="" />
     </div>
   );
 }
