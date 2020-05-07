@@ -3,29 +3,8 @@ import Axios from "axios";
 import PatientCard from "../components/PatientCard";
 
 export default function PatientsDB() {
-  const initialDoctors = [
-    {
-      id: 1,
-      doctor: "Dr. Coventry",
-      email: "ecoventry@amspractice.nl",
-      onDuty: true,
-    },
-    {
-      id: 2,
-      doctor: "Dr. Adenet",
-      email: "radenet@amspractice.nl",
-      onDuty: true,
-    },
-    {
-      id: 3,
-      doctor: "Dr. Tollady",
-      email: "atollady@amspractice.nl",
-      onDuty: false,
-    },
-  ];
-
   const [doctors, setDoctors] = useState([]);
-  // const [fetchStatus, setFetchStatus] = useState("");
+
   const [selectedDoc, setSelectedDoc] = useState("all");
   const [patients, setPatients] = useState([]);
 
@@ -35,7 +14,6 @@ export default function PatientsDB() {
     "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients";
 
   useEffect(() => {
-    // setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
       let fetchedList = await Axios.get(apiUrlDocs);
       // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
@@ -50,7 +28,6 @@ export default function PatientsDB() {
       // console.log("sortByName: ", sortByName);
       setPatients(sortByName);
       // console.log("fetched list of patients in PatientDB: ", fetchedList.data);
-      // setFetchStatus("");
     };
 
     fetchDoctors();
@@ -104,7 +81,8 @@ export default function PatientsDB() {
           {renderOptions}
         </select>
       </label>
-      {renderPatients}
+      <br />
+      {patients[0] ? renderPatients : <h2>Loading data...</h2>}
     </div>
   );
 }

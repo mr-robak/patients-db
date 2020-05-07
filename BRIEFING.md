@@ -232,10 +232,10 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The patients are sorted by their `lastName` using .sort                   | 2      | v |
 | The data for the patients is fetched from the api, not hardcoded          | 1      | v |
 | Each patient displayed has a `show details` button                        | 0.5    |
-| The show details button links to the detail page for that patient         | 1.5    |
+| The show details button links to the detail page for that patient         | 1.5    | v |
 | The page has a `select` input for the 3 doctors names and `all`           | 1      | v |
-| When `all` is selected, all patients are displayed                        | 1      |
-| Selecting the name of a doctor filters the patients that are displayed    | 3      |
+| When `all` is selected, all patients are displayed                        | 1      | v |
+| Selecting the name of a doctor filters the patients that are displayed    | 3      | v |
 | The names of the doctors in the `select` input are fetched, not hardcoded | 2      | v |
 | Total                                                                     | 16     |
 
@@ -249,11 +249,11 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/5856
 
 | Criteria                                                                      | Points |
 | ----------------------------------------------------------------------------- | ------ |
-| 1 Dynamic route is implemented using React Router for the patient detail page | 1      |
-| The page displays the firstname, lastname, gender, dateOfBirth of a patient   | 0.5    |
-| The page displays the email, phoneNumber & prescriptions of a patient         | 0.5    |
-| The data on the page is fetched from the api, not hardcoded                   | 2      |
-| The data of all the patients is fetched from the api on this page             | -1     |
+| 1 Dynamic route is implemented using React Router for the patient detail page | 1      | v |
+| The page displays the firstname, lastname, gender, dateOfBirth of a patient   | 0.5    | v |
+| The page displays the email, phoneNumber & prescriptions of a patient         | 0.5    | v |
+| The data on the page is fetched from the api, not hardcoded                   | 2      | v |
+| The data of all the patients is fetched from the api on this page             | -1     | v |
 | Total                                                                         | 5      |
 
 ### 7. Express server
@@ -283,8 +283,8 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/db
 
 | Criteria                                                               | Points |
 | ---------------------------------------------------------------------- | ------ |
-| Student has applied at least 5 style rules                             | 1      |
-| Styles are split up across at least 2 css files created by the student | 1      |
+| Student has applied at least 5 style rules                             | 1      | v |
+| Styles are split up across at least 2 css files created by the student | 1      | v |
 
 ### 9. Finishing up
 
@@ -302,8 +302,8 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/db
 | -------------------------------------------------------------------------------- | ------ |
 | Student performed an accurate self assessment (within 7 points of the evaluator) | 2      |
 | Student can reflect on their process by writing a reflection of ~200 words       | 2      |
-| Student has committed at least once per section                                  | 1      |
-| Student has pushed their repository using git                                    | 1      |
+| Student has committed at least once per section                                  | 1      | v |
+| Student has pushed their repository using git                                    | 1      | v |
 | Total                                                                            | 6      |
 
 # Self assessment

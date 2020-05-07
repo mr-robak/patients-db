@@ -1,5 +1,6 @@
 import React from "react";
 import "./PatientCard.css";
+import { Link } from "react-router-dom";
 
 export default function PatientCard(props) {
   // console.log("props on PatientCard: ", props);
@@ -12,7 +13,9 @@ export default function PatientCard(props) {
       </p>
       <p>id: {id}</p>
       <p>date of birth: {dateOfBirth}</p>
-      <p>show details</p>
+      <Link to={`/patients/${id}`}>
+        <p> show details</p>
+      </Link>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import PatientsDB from "./pages/PatientsDB";
 import DocSchedule from "./pages/DocSchedule";
 import SignUp from "./pages/SignUp";
 import NavBar from "./components/NavBar";
+import PatientDetails from "./pages/PatientDetails";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/patients" component={PatientsDB} />
+        <Route exact path="/patients" component={PatientsDB} />
+        <Route path="/patients/:patientId" component={PatientDetails} />
         <Route path="/schedule" component={DocSchedule} />
         <Route path="/signup" component={SignUp} />
       </Switch>
