@@ -7,3 +7,28 @@
   border-color: rgb(85, 85, 85);
   margin: 5px;
 }
+
+.PatientCard .buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 1em auto;
+
+  font-weight: bold;
+
+  background-color: rgb(223, 223, 223);
+  color: rgb(136, 136, 136);
+  height: 40px;
+  width: 140px;
+
+  border-radius: 9px;
+}
+.Link {
+}
+
+.PatientCard .buttons:hover {
+  background-color: rgb(110, 110, 110);
+  color: rgb(197, 197, 197);
+}

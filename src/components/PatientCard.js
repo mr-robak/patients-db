@@ -13,8 +13,8 @@ export default function PatientCard(props) {
       </p>
       <p>id: {id}</p>
       <p>date of birth: {dateOfBirth}</p>
-      <Link to={`/patients/${id}`}>
-        <p> show details</p>
+      <Link to={`/patients/${id}`} className="Link">
+        <p className="buttons"> show details</p>
       </Link>
     </div>
   );
