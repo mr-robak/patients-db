@@ -2,7 +2,7 @@ import React from "react";
 import "./PatientCard.css";
 
 export default function PatientCard(props) {
-  console.log("props on PatientCard: ", props);
+  // console.log("props on PatientCard: ", props);
   const { id, firstName, lastName, dateOfBirth } = props;
 
   return (

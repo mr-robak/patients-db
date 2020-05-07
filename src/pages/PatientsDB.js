@@ -26,7 +26,7 @@ export default function PatientsDB() {
 
   const [doctors, setDoctors] = useState([]);
   // const [fetchStatus, setFetchStatus] = useState("");
-  const [selectedDoc, setSelectedDoc] = useState("please select a doctor");
+  const [selectedDoc, setSelectedDoc] = useState("all");
   const [patients, setPatients] = useState([]);
 
   const apiUrlDocs =
@@ -37,36 +37,49 @@ export default function PatientsDB() {
   useEffect(() => {
     // setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
-      //fetch data
       let fetchedList = await Axios.get(apiUrlDocs);
       // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
+      // console.log({ id: -1, doctor: "all" }, ...fetchedList.data);
       setDoctors(fetchedList.data);
       fetchedList = await Axios.get(apiUrlPatients);
-      setPatients(fetchedList.data);
-      console.log("fetched list of patients in PatientDB: ", fetchedList.data);
 
+      const sortByName = fetchedList.data.sort((a, b) => {
+        //sorted by lastName order
+        return a.lastName.localeCompare(b.lastName);
+      });
+      // console.log("sortByName: ", sortByName);
+      setPatients(sortByName);
+      // console.log("fetched list of patients in PatientDB: ", fetchedList.data);
       // setFetchStatus("");
     };
 
-    fetchDoctors(); // call fetch()
+    fetchDoctors();
   }, []);
 
   const selectOption = (event) => {
     // console.log("currently selected: ", selectedDoc);
     // console.log("event.target.value", event.target.value);
     setSelectedDoc(event.target.value);
+    // console.log("selectedDoc", selectedDoc);
   };
+
+  const filteredPatients = patients.filter((patient) => {
+    // console.log("id patient", patient.doctorId, "selected doc", selectedDoc);
+    return selectedDoc === "all"
+      ? patient
+      : patient.doctorId === parseInt(selectedDoc);
+  });
 
   const renderOptions = doctors.map((doc) => {
     const { id, doctor } = doc;
     return (
-      <option key={id} value={doctor}>
+      <option key={id} value={id}>
         {doctor}
       </option>
     );
   });
 
-  const renderPatients = patients.map((patient) => {
+  const renderPatients = filteredPatients.map((patient) => {
     const { id, firstName, lastName, dateOfBirth } = patient;
     return (
       <PatientCard
@@ -85,21 +98,13 @@ export default function PatientsDB() {
       <label>
         doctor:
         <select name="doctors" value={selectedDoc} onChange={selectOption}>
-          <option key="-1" value="showing all patients">
+          <option key="-1" id="-1" value="all">
             showing all patients
           </option>
           {renderOptions}
         </select>
       </label>
       {renderPatients}
-
-      {/* <PatientCard
-      // key={id}
-      // // id={id}
-      // firstName={firstName}
-      // lastName={lastName}
-      // dateOfBirth={dateOfBirth}
-      /> */}
     </div>
   );
 }

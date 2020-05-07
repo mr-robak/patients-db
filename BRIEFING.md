@@ -229,14 +229,14 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The data for each patient is displayed using a seperate component         | 2      | v |
 | The data is displayed using .map                                          | 1      | v |
 | There is a warning in the console regarding "key" props                   | -1     |
-| The patients are sorted by their `lastName` using .sort                   | 2      |
-| The data for the patients is fetched from the api, not hardcoded          | 1      |
+| The patients are sorted by their `lastName` using .sort                   | 2      | v |
+| The data for the patients is fetched from the api, not hardcoded          | 1      | v |
 | Each patient displayed has a `show details` button                        | 0.5    |
 | The show details button links to the detail page for that patient         | 1.5    |
-| The page has a `select` input for the 3 doctors names and `all`           | 1      |
+| The page has a `select` input for the 3 doctors names and `all`           | 1      | v |
 | When `all` is selected, all patients are displayed                        | 1      |
 | Selecting the name of a doctor filters the patients that are displayed    | 3      |
-| The names of the doctors in the `select` input are fetched, not hardcoded | 2      |
+| The names of the doctors in the `select` input are fetched, not hardcoded | 2      | v |
 | Total                                                                     | 16     |
 
 ### 6. As a doctor I want to be able to view the details of my patients, so I can make good decisions
