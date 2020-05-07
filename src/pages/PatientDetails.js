@@ -8,7 +8,7 @@ export default function PatientDetails() {
 
   const [details, setDetails] = useState({});
 
-  console.log("params on details page: ", patientId);
+  // console.log("params on details page: ", patientId);
 
   useEffect(() => {
     const apiUrlPatientId = `https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/${encodeURIComponent(
@@ -26,7 +26,7 @@ export default function PatientDetails() {
   //   console.log("render detail", details);
 
   const renderDetails = () => {
-    console.log("details", details);
+    // console.log("details", details);
     const {
       id,
       firstName,

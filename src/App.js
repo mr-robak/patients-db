@@ -13,11 +13,11 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/patients" component={PatientsDB} />
         <Route path="/patients/:patientId" component={PatientDetails} />
+        <Route exact path="/patients" component={PatientsDB} />
         <Route path="/schedule" component={DocSchedule} />
         <Route path="/signup" component={SignUp} />
+        <Route exact path="/" component={HomePage} />
       </Switch>
     </div>
   );

@@ -7,7 +7,7 @@ export default function ContactCard() {
   // 08:00 and 16:59
 
   // console.log("Date", date);
-  console.log("time", timeNow);
+  // console.log("time", timeNow);
 
   return (
     <div className="ContactCard">
@@ -20,8 +20,9 @@ export default function ContactCard() {
         )}{" "}
         at the moment.
       </p>
-      <p>To make an appointment call:</p>
+      <p>To make an appointment make a call between 08:00 and 17:00</p>
       <p>020 555 55555</p>
+      <p></p>
     </div>
   );
 }

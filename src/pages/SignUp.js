@@ -15,7 +15,7 @@ export default function SignUp() {
   // console.log(formData);
 
   const [message, setMessage] = useState("");
-  console.log(" const [message, setMessage] = useState() ", message);
+
   const submitForm = (event) => {
     event.preventDefault();
     // console.log("Form submitted!");
