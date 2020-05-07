@@ -1,5 +1,16 @@
 .ContactCard {
-  width: 200px;
+  padding: 0.3em 1em;
+  width: 270px;
   border-color: black;
   border-style: dotted;
+}
+
+.open {
+  background-color: green;
+  color: white;
+}
+
+.closed {
+  background-color: red;
+  color: white;
 }

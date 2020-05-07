@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "";
 
 export default function NavBar() {
   return (
-    <div activeClassName="NavBar">
+    <div className="NavBar">
       <NavLink
         to="/"
-        exact="true"
+        exact={true}
         activeStyle={{
           backgroundColor: "black",
           fontWeight: "bolder",
@@ -23,7 +24,7 @@ export default function NavBar() {
       </NavLink>
       <NavLink
         to="/schedule"
-        exact="true"
+        exact={true}
         activeStyle={{
           backgroundColor: "black",
           fontWeight: "bolder",
@@ -40,7 +41,7 @@ export default function NavBar() {
       </NavLink>
       <NavLink
         to="/signup"
-        exact="true"
+        exact={true}
         activeStyle={{
           backgroundColor: "black",
           fontWeight: "bolder",
@@ -57,7 +58,7 @@ export default function NavBar() {
       </NavLink>
       <NavLink
         to="/patients"
-        exact="true"
+        exact={true}
         activeStyle={{
           backgroundColor: "black",
           fontWeight: "bolder",

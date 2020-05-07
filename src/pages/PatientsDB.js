@@ -17,7 +17,6 @@ export default function PatientsDB() {
     const fetchDoctors = async () => {
       let fetchedList = await Axios.get(apiUrlDocs);
       // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
-      // console.log({ id: -1, doctor: "all" }, ...fetchedList.data);
       setDoctors(fetchedList.data);
       fetchedList = await Axios.get(apiUrlPatients);
 

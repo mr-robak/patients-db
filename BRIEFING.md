@@ -155,7 +155,7 @@ Business logic: the practice is open between 08:00 and 16:59
 | ---------------------------------------------------------------------- | ------ |
 | Phone number is displayed on both pages                                | 0.5    | v |
 | Wether the practice is open right now is displayed on both pages       | 0.5    | v |
-| Wether the practice is open or closed is dynamic, not hardcoded        | 2      |
+| Wether the practice is open or closed is dynamic, not hardcoded        | 2      | v |
 | To display this information the same component is reused on both pages | 1      | v |
 | Total                                                                  | 4      |
 
