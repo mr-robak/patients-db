@@ -177,7 +177,7 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The data is fetched from the api, not hardcoded                   | 2      | v |
 | If the data is still being fetched, display "loading" to the user | 2      | v |
 | The data is displayed using .map                                  | 1      | v |
-| There is a warning in the console regarding "key" props           | -1     |
+| There is a warning in the console regarding "key" props           | -1     | v |
 | Doctor availability is displayed using an html `table` element    | 1      | v |
 | Total                                                             | 7      |
 
@@ -228,10 +228,10 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      | v |
 | The data for each patient is displayed using a seperate component         | 2      | v |
 | The data is displayed using .map                                          | 1      | v |
-| There is a warning in the console regarding "key" props                   | -1     |
+| There is a warning in the console regarding "key" props                   | -1     | v |
 | The patients are sorted by their `lastName` using .sort                   | 2      | v |
 | The data for the patients is fetched from the api, not hardcoded          | 1      | v |
-| Each patient displayed has a `show details` button                        | 0.5    |
+| Each patient displayed has a `show details` button                        | 0.5    | v |
 | The show details button links to the detail page for that patient         | 1.5    | v |
 | The page has a `select` input for the 3 doctors names and `all`           | 1      | v |
 | When `all` is selected, all patients are displayed                        | 1      | v |

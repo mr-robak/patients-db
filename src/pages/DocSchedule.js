@@ -68,7 +68,7 @@ export default function DocSchedule() {
   };
 
   return (
-    <div>
+    <div className="DocSchedule">
       <h1>Who is on duty?</h1>
       <div>{fetchStatus ? <h2>{fetchStatus} </h2> : renderTable()}</div>
       <ContactCard key="" />

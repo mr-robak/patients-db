@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./SignUp.css";
 
 export default function SignUp() {
@@ -55,7 +54,7 @@ export default function SignUp() {
       <form onSubmit={submitForm}>
         {/* onSubmit={submitForm} needs to be here, not on the button for e.preventdefault() to work */}
         <label>
-          first name
+          first name:
           <input
             type="text"
             name="firstName"
@@ -65,7 +64,7 @@ export default function SignUp() {
           />
         </label>
         <label>
-          last name
+          last name:
           <input
             type="text"
             name="lastName"
@@ -75,7 +74,7 @@ export default function SignUp() {
           />
         </label>
         <label>
-          email
+          email:
           <input
             type="text"
             name="email"
@@ -85,7 +84,7 @@ export default function SignUp() {
           />
         </label>
         <label>
-          phone
+          phone:
           <input
             type="text"
             name="phone"
@@ -95,7 +94,7 @@ export default function SignUp() {
           />
         </label>
         <label>
-          gender
+          gender:
           <select
             name="gender"
             value={formData.gender}
@@ -109,7 +108,7 @@ export default function SignUp() {
           </select>
         </label>
         <label>
-          date of birth
+          date of birth:
           <input
             type="date"
             name="dateOfBirth"

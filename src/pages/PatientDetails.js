@@ -41,7 +41,7 @@ export default function PatientDetails() {
     // console.log("prescriptions ", prescriptions);
 
     return (
-      <div>
+      <div className="H1">
         <h1>
           {firstName} {lastName}
         </h1>
@@ -49,11 +49,13 @@ export default function PatientDetails() {
           <p>id: {id}</p>
           <p>date of birth: {dateOfBirth}</p>
           <p>gender: {gender}</p>
+          <br />
           <p>contact details:</p>
           <ul>
             <li>email: {email}</li>
             <li>phone number: {phoneNumber}</li>
           </ul>
+          <br />
           <p>
             perscriptions:
             <ul>

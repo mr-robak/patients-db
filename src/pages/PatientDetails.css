@@ -1,5 +1,20 @@
-.wrapper {
-  width: 550px;
-  border-color: rgb(167, 166, 166);
-  border-style: dashed;
+/* .PatientDetails p,
+ul,
+li {
+  margin: 5px auto;
+  text-align: left;
 }
+.wrapper {
+  display: inline-table;
+  max-width: 500px;
+  border-color: rgb(109, 109, 109);
+  border-style: dashed;
+  padding: 1em 2em;
+}
+h1 {
+  text-align: center;
+  max-width: 500px;
+  margin-top: 3em auto;
+  border-style: dashed;
+  border-color: rgb(109, 109, 109);
+} */

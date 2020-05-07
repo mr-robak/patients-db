@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import PatientCard from "../components/PatientCard";
+import "./PatientsDB.css";
 
 export default function PatientsDB() {
   const [doctors, setDoctors] = useState([]);
@@ -69,7 +70,7 @@ export default function PatientsDB() {
   });
 
   return (
-    <div>
+    <div className="PatientsDB">
       <h1>Patients Database</h1>
       <label>
         doctor:
@@ -81,7 +82,9 @@ export default function PatientsDB() {
         </select>
       </label>
       <br />
-      {patients[0] ? renderPatients : <h2>Loading data...</h2>}
+      <div className="wrapper2">
+        {patients[0] ? renderPatients : <h2>Loading data...</h2>}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.PatientsDB {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  /* margin-top: 3em auto; */
+  border-style: dashed;
+  border-color: rgb(105, 105, 105);
+  /* margin: 1em; */
+  padding: 0.2em 0.5em;
+  width: 400px;
+}
+
+.PatientsDB label {
+  /* display: block; */
+  text-align: center;
+}
