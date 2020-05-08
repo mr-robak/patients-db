@@ -24,6 +24,18 @@ app.get("/patients", (request, response) => {
   response.send(patients);
 });
 
+app.get("/patients/:id", (request, response) => {
+  const urlId = request.params.id;
+  console.log("Patient data requested from url:", urlId);
+
+  const getPatient = patients.find((patient) => {
+    // console.log("patient", patient.id, "-- ID", patient.id === urlId);
+    return patient.id === urlId;
+  });
+  //   console.log(getPatient);
+  response.send(getPatient);
+});
+
 const landingPageHtml = `
 <!DOCTYPE html>
 <html lang="en">

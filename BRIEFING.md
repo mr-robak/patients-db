@@ -268,13 +268,13 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/db
 
 | Criteria                                                                                       | Points |
 | ---------------------------------------------------------------------------------------------- | ------ |
-| There is a file called server.js, in the folder created by create-react-app                    | 0.5    |
-| package.json contains a script called `server`, which runs the server.js file with node        | 0.5    |
-| package.json contains a script called `server-dev`, which runs the server.js file with nodemon | 0.5    |
-| running server.js starts an express server which listens on port 4000                          | 1      |
-| Requests to http://localhost:4000/patients get a response of an array with 10 patients         | 1      |
-| Requests to http://localhost:4000/doctors get a response of an array of 3 doctors              | 1      |
-| Requests to http://localhost:4000/patients/:id get a response of 1 patient object with that id | 2.5    |
+| There is a file called server.js, in the folder created by create-react-app                    | 0.5    | v |
+| package.json contains a script called `server`, which runs the server.js file with node        | 0.5    | v |
+| package.json contains a script called `server-dev`, which runs the server.js file with nodemon | 0.5    | v |
+| running server.js starts an express server which listens on port 4000                          | 1      | v |
+| Requests to http://localhost:4000/patients get a response of an array with 10 patients         | 1      | v |
+| Requests to http://localhost:4000/doctors get a response of an array of 3 doctors              | 1      | v |
+| Requests to http://localhost:4000/patients/:id get a response of 1 patient object with that id | 2.5    | v |
 | Total                                                                                          | 7      |
 
 ### 8. Styling
@@ -300,8 +300,8 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/db
 
 | Criteria                                                                         | Points |
 | -------------------------------------------------------------------------------- | ------ |
-| Student performed an accurate self assessment (within 7 points of the evaluator) | 2      |
-| Student can reflect on their process by writing a reflection of ~200 words       | 2      |
+| Student performed an accurate self assessment (within 7 points of the evaluator) | 2      | v |
+| Student can reflect on their process by writing a reflection of ~200 words       | 2      | v |
 | Student has committed at least once per section                                  | 1      | v |
 | Student has pushed their repository using git                                    | 1      | v |
 | Total                                                                            | 6      |
