@@ -27,7 +27,7 @@ export default function DocSchedule() {
   const [doctors, setDoctors] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
 
-  const localServerUrl = "http://localhost:4000/doctors";
+  // const localServerUrl = "http://localhost:4000/doctors";
   const apiUrl =
     "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
 

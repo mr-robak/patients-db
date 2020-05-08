@@ -10,9 +10,7 @@ export default function PatientDetails() {
 
   // console.log("params on details page: ", patientId);
   useEffect(() => {
-    const localServerById = `http://localhost:4000/patients/${encodeURIComponent(
-      patientId
-    )}`;
+    // const localServerById = `http://localhost:4000/patients/${encodeURIComponent(patientId)}`;
 
     const apiUrlPatientId = `https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/${encodeURIComponent(
       patientId

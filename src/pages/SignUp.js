@@ -32,7 +32,7 @@ export default function SignUp() {
 
     setFormData({ ...formData, ...newKeyValue });
   };
-
+  // console.log("formData", formData);
   const { firstName, lastName, email, phone, gender, dateOfBirth } = formData;
   const newPatient = `
   ###########################
