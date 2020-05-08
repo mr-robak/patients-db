@@ -3,16 +3,20 @@ import "./SignUp.css";
 import Axios from "axios";
 
 export default function SignUp() {
-  const emptyForm = {
-    id: "86666666266",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    gender: "male",
-    dateOfBirth: "",
-    prescriptions: ["beer", "whiskey", "weed"],
-    doctorId: 1,
+  const emptyForm = () => {
+    let rndId = Math.floor(Math.random() * 10000000000).toString();
+    let rndDoc = Math.floor(Math.random() * 3) + 1;
+    return {
+      id: rndId,
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      gender: "male",
+      dateOfBirth: "",
+      prescriptions: ["beer", "whiskey", "weed"],
+      doctorId: rndDoc,
+    };
   };
   const [formData, setFormData] = useState(emptyForm);
   // console.log(formData);

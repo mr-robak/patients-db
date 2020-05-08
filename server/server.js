@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 4000; // use $PORT if it is defined otherwise use 4000 defined
 
-const db = require("./db.json");
+let db = require("./db.json");
 
 const doctors = db.doctors;
 const patients = db.patients;
@@ -34,6 +34,7 @@ app.post("/new_user", (request, response) => {
       let obj = JSON.parse(data);
       console.log("New object from JSON", obj);
       obj.patients.push(newPatient);
+      db = JSON.stringify(obj);
       const jsonContent = JSON.stringify(obj);
       fs.writeFile("./server/db.json", jsonContent, "utf8", function (err) {
         if (err) {
