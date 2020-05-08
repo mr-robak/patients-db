@@ -19,10 +19,10 @@ export default function PatientsDB() {
 
   useEffect(() => {
     const fetchDoctors = async () => {
-      let fetchedList = await Axios.get(apiUrlDocs && localServerDocs);
+      let fetchedList = await Axios.get(apiUrlDocs);
       // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
       setDoctors(fetchedList.data);
-      fetchedList = await Axios.get(apiUrlPatients && localServerPatients);
+      fetchedList = await Axios.get(apiUrlPatients);
 
       const sortByName = fetchedList.data.sort((a, b) => {
         //sorted by lastName order

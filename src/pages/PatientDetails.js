@@ -9,17 +9,17 @@ export default function PatientDetails() {
   const [details, setDetails] = useState({});
 
   // console.log("params on details page: ", patientId);
-  const localServerById = `http://localhost:4000/patients/${encodeURIComponent(
-    patientId
-  )}`;
-
-  const apiUrlPatientId = `https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/${encodeURIComponent(
-    patientId
-  )}`;
   useEffect(() => {
+    const localServerById = `http://localhost:4000/patients/${encodeURIComponent(
+      patientId
+    )}`;
+
+    const apiUrlPatientId = `https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/${encodeURIComponent(
+      patientId
+    )}`;
     // console.log(apiUrlPatientId);
     const fetchDetails = async () => {
-      const response = await Axios.get(apiUrlPatientId && localServerById);
+      const response = await Axios.get(apiUrlPatientId);
       //   console.log(response.data);
       setDetails(response.data);
     };

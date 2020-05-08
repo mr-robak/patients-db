@@ -35,7 +35,7 @@ export default function DocSchedule() {
     setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
       //fetch data
-      const fetchedList = await Axios.get(apiUrl && localServerUrl);
+      const fetchedList = await Axios.get(apiUrl);
       console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
       setDoctors(fetchedList.data);
       setFetchStatus("");
