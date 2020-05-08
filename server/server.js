@@ -4,9 +4,9 @@ const express = require("express");
 const port = process.env.PORT || 4000; // use $PORT if it is defined otherwise use 4000 defined
 const app = express();
 
-const doctors = require("./doctors.json");
-const patients = require("./patients.json");
 const db = require("./db.json");
+const doctors = db.doctors;
+const patients = db.patients;
 
 app.listen(port, () => {
   console.log(`Listening at localhost:${port}`);
@@ -48,7 +48,3 @@ const landingPageHtml = `
     <h1>Server Running on port: ${port}</h1>
 </body>
 </html>`;
-
-function pageNotFound() {
-  console.log("404 Page not Found");
-}
