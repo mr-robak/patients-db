@@ -20,17 +20,17 @@ export default function PatientsDB() {
   useEffect(() => {
     const fetchDoctors = async () => {
       let fetchedList = await Axios.get(localServerDocs);
-      // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
+      console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
+      // const a = JSON.parse(fetchedList.data);
       setDoctors(fetchedList.data);
       fetchedList = await Axios.get(localServerPatients);
-
+      console.log("Fetched list of patients:", fetchedList.data);
       const sortByName = fetchedList.data.sort((a, b) => {
         //sorted by lastName order
         return a.lastName.localeCompare(b.lastName);
       });
       // console.log("sortByName: ", sortByName);
       setPatients(sortByName);
-      // console.log("fetched list of patients in PatientDB: ", fetchedList.data);
     };
 
     fetchDoctors();

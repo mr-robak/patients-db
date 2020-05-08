@@ -32,10 +32,10 @@ app.post("/new_user", (request, response) => {
       console.log(err);
     } else {
       let obj = JSON.parse(data);
-      console.log("!!!!!!!!!!!!!!", obj);
+      console.log("New object from JSON", obj);
       obj.patients.push(newPatient);
       const jsonContent = JSON.stringify(obj);
-      fs.writeFile("./server/NEW-db.json", jsonContent, "utf8", function (err) {
+      fs.writeFile("./server/db.json", jsonContent, "utf8", function (err) {
         if (err) {
           console.log("An error occured while writing JSON Object to File.");
           return console.log(err);

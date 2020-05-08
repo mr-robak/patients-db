@@ -4,12 +4,15 @@ import Axios from "axios";
 
 export default function SignUp() {
   const emptyForm = {
+    id: "86666666266",
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     gender: "male",
     dateOfBirth: "",
+    prescriptions: ["beer", "whiskey", "weed"],
+    doctorId: 1,
   };
   const [formData, setFormData] = useState(emptyForm);
   // console.log(formData);
@@ -27,7 +30,7 @@ export default function SignUp() {
   const sendUserToServer = () => {
     console.log(formData);
 
-    Axios.post("http://localhost:4000/new_user", JSON.stringify(formData))
+    Axios.post("http://localhost:4000/new_user", formData)
       .then(function (response) {
         console.log("response.data.staus", response.data);
         response.data === "OK"
