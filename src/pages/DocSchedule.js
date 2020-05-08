@@ -27,6 +27,7 @@ export default function DocSchedule() {
   const [doctors, setDoctors] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
 
+  const localServerUrl = "http://localhost:4000/doctors";
   const apiUrl =
     "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
 
@@ -34,8 +35,8 @@ export default function DocSchedule() {
     setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
       //fetch data
-      const fetchedList = await Axios.get(apiUrl);
-      // console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
+      const fetchedList = await Axios.get(apiUrl && localServerUrl);
+      console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
       setDoctors(fetchedList.data);
       setFetchStatus("");
     };

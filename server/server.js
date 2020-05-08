@@ -1,8 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 // console.log("Hello World!");
 
-const port = process.env.PORT || 4000; // use $PORT if it is defined otherwise use 4000 defined
 const app = express();
+app.use(cors());
+
+const port = process.env.PORT || 4000; // use $PORT if it is defined otherwise use 4000 defined
 
 const db = require("./db.json");
 const doctors = db.doctors;

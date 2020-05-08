@@ -8,9 +8,7 @@
       "dateOfBirth": "15/01/2005",
       "email": "mrosenbaum0@fastcompany.com",
       "phoneNumber": "+351 161 160 5674",
-      "prescriptions": [
-        "Lidocaine Viscous"
-      ],
+      "prescriptions": ["Lidocaine Viscous"],
       "doctorId": 1
     },
     {
@@ -21,10 +19,7 @@
       "dateOfBirth": "29/09/2003",
       "email": "flief1@apache.org",
       "phoneNumber": "+86 503 995 7341",
-      "prescriptions": [
-        "Mucinex",
-        "Aspirin"
-      ],
+      "prescriptions": ["Mucinex", "Aspirin"],
       "doctorId": 2
     },
     {
@@ -35,10 +30,7 @@
       "dateOfBirth": "14/01/2014",
       "email": "ralflat2@pcworld.com",
       "phoneNumber": "+1 914 731 0603",
-      "prescriptions": [
-        "ARBUTINUM",
-        "Cetirizine Hydrochloride"
-      ],
+      "prescriptions": ["ARBUTINUM", "Cetirizine Hydrochloride"],
       "doctorId": 2
     },
     {
@@ -64,9 +56,7 @@
       "dateOfBirth": "09/07/1985",
       "email": "bbolgar4@wired.com",
       "phoneNumber": "+7 375 198 3116",
-      "prescriptions": [
-        "Vanilla Fig Hand Sanitizer"
-      ],
+      "prescriptions": ["Vanilla Fig Hand Sanitizer"],
       "doctorId": 2
     },
     {
@@ -77,10 +67,7 @@
       "dateOfBirth": "14/12/1949",
       "email": "akilmartin5@google.co.jp",
       "phoneNumber": "+1 773 365 8289",
-      "prescriptions": [
-        "NEXIUM",
-        "Clear Defense"
-      ],
+      "prescriptions": ["NEXIUM", "Clear Defense"],
       "doctorId": 3
     },
     {
@@ -102,9 +89,7 @@
       "dateOfBirth": "27/08/1959",
       "email": "fjohnston7@noaa.gov",
       "phoneNumber": "+505 127 699 7118",
-      "prescriptions": [
-        "DELUXE Dish DETERGENT"
-      ],
+      "prescriptions": ["DELUXE Dish DETERGENT"],
       "doctorId": 3
     },
     {
@@ -115,10 +100,7 @@
       "dateOfBirth": "29/01/1953",
       "email": "jfurmonger8@baidu.com",
       "phoneNumber": "+62 826 530 5184",
-      "prescriptions": [
-        "Acyclovir",
-        "Palmers Amaranth"
-      ],
+      "prescriptions": ["Acyclovir", "Palmers Amaranth"],
       "doctorId": 1
     },
     {
@@ -129,15 +111,13 @@
       "dateOfBirth": "31/05/1984",
       "email": "gstutte9@joomla.org",
       "phoneNumber": "+81 855 427 4970",
-      "prescriptions": [
-        "Emtriva"
-      ],
+      "prescriptions": ["Emtriva"],
       "doctorId": 1
     }
   ],
   "doctors": [
     {
-      "id": 1,
+      "id": 11,
       "doctor": "Dr. Coventry",
       "email": "ecoventry@amspractice.nl",
       "onDuty": true
