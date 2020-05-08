@@ -4,38 +4,18 @@ import "./DocSchedule.css";
 import Axios from "axios";
 
 export default function DocSchedule() {
-  // const initialDoctors = [
-  //   {
-  //     id: 1,
-  //     doctor: "Dr. Coventry",
-  //     email: "ecoventry@amspractice.nl",
-  //     onDuty: true,
-  //   },
-  //   {
-  //     id: 2,
-  //     doctor: "Dr. Adenet",
-  //     email: "radenet@amspractice.nl",
-  //     onDuty: true,
-  //   },
-  //   {
-  //     id: 3,
-  //     doctor: "Dr. Tollady",
-  //     email: "atollady@amspractice.nl",
-  //     onDuty: false,
-  //   },
-  // ];
   const [doctors, setDoctors] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
 
-  // const localServerUrl = "http://localhost:4000/doctors";
-  const apiUrl =
-    "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
+  const localServerUrl = "http://localhost:4000/doctors";
+  // const apiUrl =
+  //   "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
 
   useEffect(() => {
     setFetchStatus("Loading data...");
     const fetchDoctors = async () => {
       //fetch data
-      const fetchedList = await Axios.get(apiUrl);
+      const fetchedList = await Axios.get(localServerUrl);
       console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
       setDoctors(fetchedList.data);
       setFetchStatus("");

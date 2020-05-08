@@ -9,20 +9,20 @@ export default function PatientsDB() {
   const [selectedDoc, setSelectedDoc] = useState("all");
   const [patients, setPatients] = useState([]);
 
-  // const localServerDocs = "http://localhost:4000/doctors";
-  // const localServerPatients = "http://localhost:4000/patients";
+  const localServerDocs = "http://localhost:4000/doctors";
+  const localServerPatients = "http://localhost:4000/patients";
 
-  const apiUrlDocs =
-    "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
-  const apiUrlPatients =
-    "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients";
+  // const apiUrlDocs =
+  //   "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
+  // const apiUrlPatients =
+  //   "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients";
 
   useEffect(() => {
     const fetchDoctors = async () => {
-      let fetchedList = await Axios.get(apiUrlDocs);
+      let fetchedList = await Axios.get(localServerDocs);
       // console.log("fetched list of doctors in PatientDB: ", fetchedList.data);
       setDoctors(fetchedList.data);
-      fetchedList = await Axios.get(apiUrlPatients);
+      fetchedList = await Axios.get(localServerPatients);
 
       const sortByName = fetchedList.data.sort((a, b) => {
         //sorted by lastName order
