@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import Axios from "axios";
 
 export default function SignUp() {
   const emptyForm = {
@@ -7,8 +8,8 @@ export default function SignUp() {
     lastName: "",
     email: "",
     phone: "",
-    gender: "",
-    dateOfBirth: "",
+    gender: "male",
+    dateOfBirth: "11-05-2000",
   };
   const [formData, setFormData] = useState(emptyForm);
   // console.log(formData);
@@ -21,6 +22,22 @@ export default function SignUp() {
     setFormData(emptyForm);
     setMessage("Signup successful!");
     console.log(newPatient);
+    sendUserToServer();
+  };
+  const sendUserToServer = () => {
+    console.log(formData);
+
+    Axios.post("http://localhost:4000/new_user", formData)
+      .then(function (response) {
+        console.log("response.data.staus", response.data);
+        response.data === "OK"
+          ? setMessage("Signup successful!")
+          : setMessage("");
+        // console.log("response", response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const formInputHandler = (event) => {

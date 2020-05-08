@@ -1,9 +1,14 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
 // console.log("Hello World!");
 
 const app = express();
 app.use(cors());
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const port = process.env.PORT || 4000; // use $PORT if it is defined otherwise use 4000 defined
 
@@ -13,6 +18,13 @@ const patients = db.patients;
 
 app.listen(port, () => {
   console.log(`Listening at localhost:${port}`);
+});
+
+app.post("/new_user", (request, response) => {
+  // console.log("Request at /new_user", request.body);
+  const newPatient = request.body;
+  console.log("POST recieved at /new_user", newPatient);
+  response.sendStatus(200);
 });
 
 app.get("/", (request, response) => {
