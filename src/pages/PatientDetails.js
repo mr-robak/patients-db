@@ -10,8 +10,6 @@ export default function PatientDetails() {
 
   // console.log("params on details page: ", patientId);
   useEffect(() => {
-    // const localServerById = `http://localhost:4000/patients/${encodeURIComponent(patientId)}`;
-
     const apiUrlPatientId = `https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/${encodeURIComponent(
       patientId
     )}`;
@@ -24,10 +22,7 @@ export default function PatientDetails() {
     fetchDetails();
   }, [patientId]);
 
-  //   console.log("render detail", details);
-
   const renderDetails = () => {
-    // console.log("details", details);
     const {
       id,
       firstName,
@@ -57,14 +52,12 @@ export default function PatientDetails() {
             <li>phone number: {phoneNumber}</li>
           </ul>
           <br />
-          <p>
-            perscriptions:
-            <ul>
-              {prescriptions.map((med) => {
-                return <li>{med}</li>;
-              })}
-            </ul>
-          </p>
+          <p>perscriptions:</p>
+          <ul>
+            {prescriptions.map((med, index) => {
+              return <li key={index + med}>{med}</li>;
+            })}
+          </ul>
         </div>
       </div>
     );

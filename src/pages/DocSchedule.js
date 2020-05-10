@@ -4,26 +4,6 @@ import "./DocSchedule.css";
 import Axios from "axios";
 
 export default function DocSchedule() {
-  // const initialDoctors = [
-  //   {
-  //     id: 1,
-  //     doctor: "Dr. Coventry",
-  //     email: "ecoventry@amspractice.nl",
-  //     onDuty: true,
-  //   },
-  //   {
-  //     id: 2,
-  //     doctor: "Dr. Adenet",
-  //     email: "radenet@amspractice.nl",
-  //     onDuty: true,
-  //   },
-  //   {
-  //     id: 3,
-  //     doctor: "Dr. Tollady",
-  //     email: "atollady@amspractice.nl",
-  //     onDuty: false,
-  //   },
-  // ];
   const [doctors, setDoctors] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
 
@@ -36,7 +16,7 @@ export default function DocSchedule() {
     const fetchDoctors = async () => {
       //fetch data
       const fetchedList = await Axios.get(apiUrl);
-      console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
+      // console.log("fetch list of doctors in DocShedule: ", fetchedList.data);
       setDoctors(fetchedList.data);
       setFetchStatus("");
     };
