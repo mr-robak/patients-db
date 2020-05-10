@@ -57,14 +57,12 @@ export default function PatientDetails() {
             <li>phone number: {phoneNumber}</li>
           </ul>
           <br />
-          <p>
-            perscriptions:
-            <ul>
-              {prescriptions.map((med) => {
-                return <li>{med}</li>;
-              })}
-            </ul>
-          </p>
+          <p>perscriptions:</p>
+          <ul>
+            {prescriptions.map((med, indx) => {
+              return <li key={indx}>{med}</li>;
+            })}
+          </ul>
         </div>
       </div>
     );

@@ -5,7 +5,6 @@ export default function ContactCard() {
   const timeNow = new Date().getHours();
 
   // 08:00 and 16:59
-
   // console.log("Date", date);
   // console.log("time", timeNow);
 

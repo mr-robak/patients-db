@@ -7,6 +7,7 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <h1>Welcome to AMS GPs</h1>
+
       <ContactCard />
       <div>
         <Link to="/schedule" className="Link">

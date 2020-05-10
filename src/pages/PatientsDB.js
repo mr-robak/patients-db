@@ -58,16 +58,22 @@ export default function PatientsDB() {
       </option>
     );
   });
+  const [counter, setCounter] = useState(0);
+  const counterHandler = (isBoxChecked) => {
+    console.log("isBoxChecked in PatientDB", isBoxChecked);
+    isBoxChecked ? setCounter(counter + 1) : setCounter(counter - 1);
+  };
 
-  const renderPatients = filteredPatients.map((patient) => {
+  const renderPatients = filteredPatients.map((patient, index) => {
     const { id, firstName, lastName, dateOfBirth } = patient;
     return (
       <PatientCard
-        key={id}
+        key={index + id}
         id={id}
         firstName={firstName}
         lastName={lastName}
         dateOfBirth={dateOfBirth}
+        checkBox={counterHandler}
       />
     );
   });
@@ -84,6 +90,8 @@ export default function PatientsDB() {
           {renderOptions}
         </select>
       </label>
+      <br />
+      <p>{counter ? `${counter} patient(s) selected` : undefined}</p>
       <br />
       <div className="wrapper2">
         {patients[0] ? renderPatients : <h2>Loading data...</h2>}

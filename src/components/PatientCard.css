@@ -32,3 +32,7 @@
   background-color: rgb(110, 110, 110);
   color: rgb(197, 197, 197);
 }
+
+input[type="checkbox"] {
+  transform: scale(2);
+}
